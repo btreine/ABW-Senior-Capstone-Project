@@ -1,0 +1,158 @@
+
+<ActionBar>
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+        ios.position="left">
+    </ActionItem>
+    <ActionItem class="action-image">
+        <Image src="~/app/images/logo2x-glossy.png"></Image>
+    </ActionItem>
+</ActionBar>
+
+<FlexboxLayout>
+    <Label class="h1" text="Account Info"></Label>
+    <!-- user info as 2 wide grid -->
+    <!-- 7 rows, 50px long -->
+    <GridLayout
+        rows="50,50,50,50,50,50,50"
+        columns="*,*"
+        class="page__content">
+    <!-- first row (0) as column names -->
+    <!-- column 0 is attribute name (name, email, etc) -->
+        <Label
+            id="i1"
+            row="0"
+            col="0"
+            class="attribute"
+            marginLeft="10"
+            text="General Attribute"
+            textAlignment="left"
+        ></Label>
+
+    <!-- column 1 is actual user data pulled from DB -->
+        <Label
+            id="i2"
+            row="0"
+            col="1"
+            class="userinfo"
+            marginLeft="10"
+            text="User Info"
+            textAlignment="left"
+        ></Label>
+
+    <!-- name field & fname lname -->
+        <Label
+            id="i3"
+            row="1"
+            col="0"
+            class="attribute"
+            textAlignment="left"
+            marginLeft="10"
+            text="Name:"
+        ></Label>
+        <Label
+            id="i4"
+            row="1"
+            col="1"
+            class="userinfo"
+            textAlignment="left"
+            marginLeft="10"
+            text="Test User"
+        ></Label>
+    <!-- email field & user email -->
+        <Label
+            id="i5"
+            row="2"
+            col="0"
+            class="attribute"
+            textAlignment="left"
+            marginLeft="10"
+            text="Email:"
+        ></Label>
+        <Label
+            id="i6"
+            row="2"
+            col="1"
+            class="userinfo"
+            textAlignment="left"
+            marginLeft="10"
+            text="email@email.com"
+        ></Label>
+    <!-- phone field & user phone number -->
+        <Label
+            id="i7"
+            row="3"
+            col="0"
+            class="attribute"
+            textAlignment="left"
+            marginLeft="10"
+            text="Phone:"
+        ></Label>
+        <Label
+            id="i8"
+            row="3"
+            col="1"
+            class="userinfo"
+            textAlignment="left"
+            marginLeft="10"
+            text="(111) 555-7777"
+        ></Label>
+    <!-- school field & user school name -->
+        <Label
+            id="i9"
+            row="4"
+            col="0"
+            class="attribute"
+            textAlignment="left"
+            marginLeft="10"
+            text="School:"
+        ></Label>
+        <Label
+            id="i10"
+            row="4"
+            col="1"
+            class="userinfo"
+            textAlignment="left"
+            marginLeft="10"
+            text="UT Chattanooga"
+        ></Label>
+    <!-- team field & user team name -->
+        <Label
+            id="i11"
+            row="5"
+            col="0"
+            class="attribute"
+            textAlignment="left"
+            marginLeft="10"
+            text="Team:"
+        ></Label>
+        <Label
+            id="i12"
+            row="5"
+            col="1"
+            class="userinfo"
+            textAlignment="left"
+            marginLeft="10"
+            text="Mocs"
+        ></Label>
+    <!-- sport field & user sport -->
+        <Label
+            id="i13"
+            row="6"
+            col="0"
+            class="attribute"
+            textAlignment="left"
+            marginLeft="10"
+            text="Sport:"
+        ></Label>
+        <Label
+            id="i14"
+            row="6"
+            col="1"
+            class="userinfo"
+            textAlignment="left"
+            marginLeft="10"
+            text="Hockey"
+        ></Label>
+    </GridLayout>
+</FlexboxLayout>

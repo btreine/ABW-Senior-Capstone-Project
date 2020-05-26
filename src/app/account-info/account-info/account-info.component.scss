@@ -1,0 +1,11 @@
+/* Set everything in the flexbox to center of page*/
+FlexboxLayout {
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+}
+
+/* Set general theme for buttons on this page*/
+.btn {
+	width: 80%;
+}
