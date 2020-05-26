@@ -1,0 +1,41 @@
+<ActionBar>
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+        ios.position="left">
+    </ActionItem>
+    <ActionItem class="action-image">
+        <Image src="~/app/images/logo2x-glossy.png"></Image>
+    </ActionItem>
+</ActionBar>
+
+<FlexboxLayout>
+    <Label class="h1" text="Coaches Training"></Label>
+    <Button
+        class="btn btn-primary btn-rounded-lg"
+        text="Develop Great Athletes"
+        (tap) = "onChangeStatus(keys[0])"
+    ></Button>
+
+    <Button
+        class="btn btn-primary btn-rounded-lg"
+        text="The 80/20 Rule"
+        (tap) =onChangeStatus(keys[1])
+    ></Button>
+    <Button
+        class="btn btn-primary btn-rounded-lg"
+        text="4 Principles to Help Parents"
+        (tap) = onChangeStatus(keys[2])
+    ></Button>
+    <Button
+        class="btn btn-primary btn-rounded-lg"
+        text="Handle Unfavorable Behavior the Right Way"
+        (tap) = "onChangeStatus(keys[3])"
+    ></Button>
+    <Button
+        class="btn btn-primary btn-rounded-lg"
+        text="The Primary Purpose of Sport"
+        (tap) = "onChangeStatus(keys[4])"
+    ></Button>
+</FlexboxLayout>
+
+

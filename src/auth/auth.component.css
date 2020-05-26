@@ -1,0 +1,30 @@
+
+.page {
+  align-items: center;
+  flex-direction: column;
+}
+
+.form {
+  margin-left: 30;
+  margin-right: 30;
+  flex-grow: 2;
+  vertical-align: middle;
+}
+
+.logo {
+  margin-bottom: 12;
+  height: 90;
+  font-weight: bold;
+}
+
+.btn-primary {
+	margin: 30 5 15 5;
+	background-color: #bb3226;
+	opacity: .9;
+	color: #ffffff;
+}
+
+.btn-rounded-lg {
+	background-color: #bb3226;
+	opacity: .9;
+}

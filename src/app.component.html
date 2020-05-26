@@ -1,0 +1,68 @@
+<!--
+RadSideDrawer is a UI component part of the Progress NativeScript UI set of components.
+Learn more about the RadSideDrawer UI component and how it can be customized in this documentation article:
+https://docs.nativescript.org/angular/ui/professional-ui-components/ng-SideDrawer/getting-started
+-->
+<RadSideDrawer [drawerTransition]="sideDrawerTransition">
+    <GridLayout tkDrawerContent rows="auto, *" class="nt-drawer__content">
+
+    <!-- drawer header (image, name, email) -->
+    <!-- TODO: dynamic loading for user info -->
+        <StackLayout row="0" class="nt-drawer__header">
+            <Image class="nt-drawer__header-image fas t-36" src="font://&#xf2bd;"></Image>
+            <Label class="nt-drawer__header-brand" text="Test User"></Label>
+            <Label class="nt-drawer__header-footnote" text="test@test.com"></Label>
+        </StackLayout>
+
+    <!-- Drawer Tappable Content -->
+        <ScrollView row="1" class="nt-drawer__body">
+            <StackLayout>
+
+            <!-- account info button -->
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/account-info')" (tap)="onNavItemTap('/account-info')">
+                    <Label col="0" text="&#xf2bb;" class="nt-icon fas"></Label>
+                    <Label col="1" text="Account Info" class="p-r-10"></Label>
+                </GridLayout>
+
+            <!-- coach training button -->
+            <!-- TODO: make visible on if usertype is coach -->
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/coach-training')" (tap)="onNavItemTap('/coach-training')">
+                    <Label col="0" text="&#xf51c;" class="nt-icon fas"></Label>
+                    <Label col="1" text="Coaches Training" class="p-r-10"></Label>
+                </GridLayout>
+
+            <!-- evaluations button -->
+            <!-- TODO: usertype based views -->
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/evaluations')" (tap)="onNavItemTap('/evaluations')">
+                    <Label col="0" text="&#xf15c;" class="nt-icon fas"></Label>
+                    <Label col="1" text="Evaluations" class="p-r-10"></Label>
+                </GridLayout>
+
+            <!-- practice plans button -->
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/practice-plans')" (tap)="onNavItemTap('/practice-plans')">
+                    <Label col="0" text="&#xf70c;" class="nt-icon fas"></Label>
+                    <Label col="1" text="Practice Plan" class="p-r-10"></Label>
+                </GridLayout>
+
+            <!-- separator line -->
+                <StackLayout class="hr"></StackLayout>
+
+            <!-- settings button -->
+                <GridLayout columns="auto, *" class="nt-drawer__list-item" [class.-selected]="isComponentSelected('/settings')" (tap)="onNavItemTap('/settings')">
+                    <Label col="0" text="&#xf013;" class="nt-icon fas"></Label>
+                    <Label col="1" text="Settings" class="p-r-10"></Label>
+                </GridLayout>
+                <Button
+                  text="Logout"
+                  class="btn btn-primary btn-rounded-lg"
+                  backgroundColor="#8a8a8a"
+                  (tap)="onLogout()"
+                ></Button>
+            </StackLayout>
+        </ScrollView>
+    </GridLayout>
+
+<!-- route (page) dependent content loaded under drawer -->
+    <page-router-outlet tkMainContent></page-router-outlet>
+
+</RadSideDrawer>

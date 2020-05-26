@@ -1,0 +1,51 @@
+
+/* Set everything in the flexbox to center of page*/
+FlexboxLayout {
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+}
+
+ .title {
+  	font-size: 18;
+  	color: #bb3226;
+  }
+  
+/* Set general theme for buttons on this page*/
+.btn {
+	width: 80%;
+}
+
+/* weekday labels */
+.week-day-label {
+	font-family: 'Merriweather', 'Merriweather-Regular', 'Merriweather-Bold';
+	font-weight: bold;
+	font-size: 18;
+	margin: 15 0;
+}
+
+/* days in the week*/
+.days {
+	justify-content: center;
+	align-items: center;
+	width: 50;
+	height: 50;
+	margin: 10;
+	border-color: #bb3226;
+	border-width: 1;
+	border-radius: 50%;
+	font-family: 'Merriweather', 'Merriweather-Regular', 'Merriweather-Bold';
+	font-size: 18;
+	color: #000000;
+}
+
+/* day background color */
+.not-settable {
+	background: #ccc;
+	color: #535353;
+}
+
+
+
+
+

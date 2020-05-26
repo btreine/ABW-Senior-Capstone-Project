@@ -1,0 +1,24 @@
+ <ActionBar>
+  <ActionItem ios.position="left">
+        <Image src="~/./app/images/logo2x-glossy.png"></Image>
+    </ActionItem>
+</ActionBar>
+
+<FlexboxLayout>
+
+	<Label class="h1" text="View Practice"></Label>
+	<StackLayout class="box">
+	    <Label class = "header" [text] = 'loadedDate | date'></Label>
+	    <TextView class = "body" hint="Practice plan description goes here." autocorrect="false" [text] = 'loadedDescription' textWrap ="true"></TextView>
+	</StackLayout>
+	<Button class ="btn btn-primary btn-rounded-lg"
+		(tap) = "onEdit()"
+		 text = "Edit Plan">
+	</Button>
+
+	<Button class = "btn btn-flat"
+		(tap) = "onDelete()"
+		text = "Delete Plan"
+	></Button>
+
+</FlexboxLayout>

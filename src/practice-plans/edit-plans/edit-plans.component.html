@@ -1,0 +1,39 @@
+ <ActionBar>
+  <ActionItem ios.position="left">
+        <Image src="~/app/images/logo2x-glossy.png"></Image>
+    </ActionItem>
+</ActionBar>
+
+<Label [text]="loadedDate | date" class="btn btn-primary"></Label>
+
+<FlexboxLayout class="form">
+
+    <StackLayout class="input-field">
+
+      <Label class="h1" text="Edit Practice"></Label>
+
+      <Label
+        class="label"
+        text="Description"
+        [ngClass]="{ invalid: !descriptionCtrl.valid && descriptionCtrl.touched }"
+      ></Label>
+      <TextView
+        class="input"
+        returnKeyType="done"
+        required
+        ngModel
+        #descriptionCtrl="ngModel"
+      ></TextView>
+      <Label
+        *ngIf="!descriptionCtrl.valid && descriptionCtrl.touched"
+        text="Please enter a valid description."
+      ></Label>
+    </StackLayout>
+</FlexboxLayout>
+    <Button
+      class="btn btn-primary btn-rounded-lg"
+      text="Save"
+      [isEnabled]="descriptionCtrl.valid"
+      (tap)="onSubmit(descriptionCtrl.value)"
+    ></Button>
+

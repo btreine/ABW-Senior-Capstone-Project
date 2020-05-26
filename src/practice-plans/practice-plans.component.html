@@ -1,0 +1,67 @@
+<ActionBar>
+    <NavigationButton  
+        ios:visibility="collapsed" 
+        icon="res://menu" 
+        (tap)="onDrawerButtonTap()"
+    ></NavigationButton>
+    <ActionItem 
+        icon="res://menu" 
+        android:visibility="collapsed" 
+        (tap)="onDrawerButtonTap()"
+        ios.position="left"
+        pageTransition="slideLeft">  
+    </ActionItem>
+    <ActionItem ios.position="left">
+        <Image src="~/app/images/logo2x-glossy.png"></Image>
+    </ActionItem>
+</ActionBar>
+
+
+<ScrollView>
+<FlexboxLayout>
+    <Label class="h1" text="Practice Calendar"></Label>
+
+    <Button
+        class="btn btn-primary btn-rounded-lg"
+        text="Previous"
+        (tap) = "onPrevMonth()"
+    ></Button>
+
+    <Button
+        class="btn btn-primary btn-rounded-lg"
+        text="Next"
+        (tap)="onNextMonth()"
+    ></Button>
+
+     <Label
+        class = "header"
+        [text] = "months[currentMonth]"
+    ></Label>
+
+    <GridLayout rows="auto,*,*,*,*,*,*" columns="*,*,*,*,*,*,*">
+
+        <Label class="text-center week-day-label"
+            width="100%"
+            *ngFor="let weekDay of weekDays; let i=index"
+            [text]="weekDay"
+            row="0"
+            [col]="i"
+        ></Label>
+
+    <FlexboxLayout
+        *ngFor="let day of days; let i = index"
+        class= "days not-settable"
+        [row]="getRow(i, day)"
+        [col]="day.dayInWeek"
+        (tap)="onChangeStatus(day.dayInMonth)"
+
+        ><Label
+            [text]="day.dayInMonth"
+        ></Label>
+    </FlexboxLayout>
+
+    </GridLayout>
+
+</FlexboxLayout>
+</ScrollView>
+   

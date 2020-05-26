@@ -1,0 +1,25 @@
+    <ActionBar>
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <ActionItem icon="res://menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+        ios.position="left">
+    </ActionItem>
+    <ActionItem class="Athletes">
+        <Image src="~/app/images/logo2x-glossy.png"></Image>
+    </ActionItem>
+</ActionBar>
+
+<FlexboxLayout>
+    <Label class="h1" 
+            text="Evaluations"
+    ></Label>
+
+    <Button class="btn btn-primary btn-rounded-lg" 
+            text="Roster"
+    ></Button>
+    <Button class="btn btn-primary btn-rounded-lg" 
+            text="Athlete Evaluations"
+    ></Button>
+    <Button class="btn btn-primary btn-rounded-lg" 
+            text="Reports"
+    ></Button>
+</FlexboxLayout>
